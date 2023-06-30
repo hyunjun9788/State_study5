@@ -1,6 +1,7 @@
 import './App.css';
 import {useState} from "react";
-
+import Input from "./components/Input";
+import Button from "./components/Button";
 
 function App() {
 
@@ -22,9 +23,9 @@ function App() {
 
     return (
         <form onSubmit={formSubmitHandler}>
-            <input placeholder='유저명' onChange={idInputHandler}/>
-            <input placeholder='비밀번호' onChange={pwInputHandler}/>
-            <button type='submit'>제출</button>
+            <Input placeholder='유저명' value={textId} onChange={idInputHandler}/>
+            <Input placeholder='비밀번호' value={textPw} onChange={pwInputHandler} type='password'/>
+            <Button type='submit'>제출</Button>
         </form>
     );
 }
